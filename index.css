@@ -1,0 +1,30 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #27292c;
+    color: white;
+    text-align: center;
+}
+
+.can {
+    position: absolute;
+    width: 100px;
+    aspect-ratio: 7/13;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    background: url(can.png), repeat-x var(--url) var(--left) 85%;
+    background-size: 100%, 900%;
+    
+    -webkit-mask-image: url("can.png");
+    mask-image: url("can.png");
+    mask-size: 100%;
+    background-blend-mode: multiply;
+    --left: -90px;
+    transition: background 1s ease-in-out;
+}
+
+.can:hover {
+    --left: -810px;
+}
+
+/* -90px */
